@@ -1,0 +1,10 @@
+.custom-background {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.5);
+  margin: 10px;
+  padding: 10px 50px;
+  border-radius: 50px;
+}

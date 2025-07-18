@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Vemeta";
+  src: url("./fonts/font-fortus-nova/CFFortusnova-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

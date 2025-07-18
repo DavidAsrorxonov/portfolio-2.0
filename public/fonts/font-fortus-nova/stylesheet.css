@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-LightItalic.eot');
+    src: local('CF Fortusnova Light Italic'), local('CFFortusnova-LightItalic'),
+        url('CFFortusnova-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-LightItalic.woff2') format('woff2'),
+        url('CFFortusnova-LightItalic.woff') format('woff'),
+        url('CFFortusnova-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-Bold.eot');
+    src: local('CF Fortusnova Bold'), local('CFFortusnova-Bold'),
+        url('CFFortusnova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-Bold.woff2') format('woff2'),
+        url('CFFortusnova-Bold.woff') format('woff'),
+        url('CFFortusnova-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-SemiBold.eot');
+    src: local('CF Fortusnova Semi Bold'), local('CFFortusnova-SemiBold'),
+        url('CFFortusnova-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-SemiBold.woff2') format('woff2'),
+        url('CFFortusnova-SemiBold.woff') format('woff'),
+        url('CFFortusnova-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-SemiBoldItalic.eot');
+    src: local('CF Fortusnova Semi Bold Italic'), local('CFFortusnova-SemiBoldItalic'),
+        url('CFFortusnova-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-SemiBoldItalic.woff2') format('woff2'),
+        url('CFFortusnova-SemiBoldItalic.woff') format('woff'),
+        url('CFFortusnova-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-Light.eot');
+    src: local('CF Fortusnova Light'), local('CFFortusnova-Light'),
+        url('CFFortusnova-Light.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-Light.woff2') format('woff2'),
+        url('CFFortusnova-Light.woff') format('woff'),
+        url('CFFortusnova-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-Medium.eot');
+    src: local('CF Fortusnova Medium'), local('CFFortusnova-Medium'),
+        url('CFFortusnova-Medium.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-Medium.woff2') format('woff2'),
+        url('CFFortusnova-Medium.woff') format('woff'),
+        url('CFFortusnova-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-MediumItalic.eot');
+    src: local('CF Fortusnova Medium Italic'), local('CFFortusnova-MediumItalic'),
+        url('CFFortusnova-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-MediumItalic.woff2') format('woff2'),
+        url('CFFortusnova-MediumItalic.woff') format('woff'),
+        url('CFFortusnova-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-Regular.eot');
+    src: local('CF Fortusnova Regular'), local('CFFortusnova-Regular'),
+        url('CFFortusnova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-Regular.woff2') format('woff2'),
+        url('CFFortusnova-Regular.woff') format('woff'),
+        url('CFFortusnova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-Italic.eot');
+    src: local('CF Fortusnova Italic'), local('CFFortusnova-Italic'),
+        url('CFFortusnova-Italic.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-Italic.woff2') format('woff2'),
+        url('CFFortusnova-Italic.woff') format('woff'),
+        url('CFFortusnova-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CF Fortusnova';
+    src: url('CFFortusnova-BoldItalic.eot');
+    src: local('CF Fortusnova Bold Italic'), local('CFFortusnova-BoldItalic'),
+        url('CFFortusnova-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('CFFortusnova-BoldItalic.woff2') format('woff2'),
+        url('CFFortusnova-BoldItalic.woff') format('woff'),
+        url('CFFortusnova-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
