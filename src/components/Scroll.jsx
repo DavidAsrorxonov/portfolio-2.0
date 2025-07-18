@@ -9,7 +9,7 @@ const Scroll = () => {
   useEffect(() => {
     gsap.fromTo(
       ScrollAnimRef.current,
-      { opacity: 0, scale: 0, y: 500 },
+      { opacity: 0, scale: 0, y: 0 },
       { opacity: 1, scale: 1, y: 0, duration: 4, delay: 3 }
     );
   });

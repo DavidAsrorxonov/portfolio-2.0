@@ -4,7 +4,7 @@ import Scroll from "../components/Scroll";
 
 const Landing = () => {
   return (
-    <div>
+    <div className="h-screen">
       <Header />
       <Intro />
       <Scroll />
