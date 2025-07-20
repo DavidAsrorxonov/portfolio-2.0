@@ -10,9 +10,12 @@ import aboutMe from "../constants/about";
  * Utilizes TailwindCSS classes for styling and layout.
  */
 
-const CardContainer = () => {
+const CardContainer = ({ scrollRef }) => {
   return (
-    <div className="w-full h-[85%] overflow-x-scroll scroll-smooth snap-x snap-mandatory flex scrollbar-hide">
+    <div
+      className="w-full h-[85%] overflow-x-scroll scroll-smooth snap-x snap-mandatory flex scrollbar-hide"
+      ref={scrollRef}
+    >
       {aboutMe.map((card) => (
         <div
           key={card.id}

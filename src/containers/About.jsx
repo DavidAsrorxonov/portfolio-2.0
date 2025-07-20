@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import SectionTitle from "../components/SectionTitle";
 import CardContainer from "../components/CardContainer";
 import NavigateButtons from "../components/NavigateButtons";
@@ -12,11 +12,13 @@ import NavigateButtons from "../components/NavigateButtons";
  * @returns A JSX element representing the About section.
  */
 const About = () => {
+  const scrollContainerRef = useRef(null);
+
   return (
     <div className="relative h-screen bg-[#161616]">
       <SectionTitle title="Get to know me" />
-      <CardContainer />
-      <NavigateButtons />
+      <CardContainer scrollRef={scrollContainerRef} />
+      <NavigateButtons scrollContainerRef={scrollContainerRef} />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 /**
@@ -16,8 +16,10 @@ import gsap from "gsap";
  * The function takes no arguments and returns no value.
  * The `useEffect` hook takes an array of dependencies as its second argument, which in this case is an empty array.
  */
-const NavigateButtons = () => {
+const NavigateButtons = ({ scrollContainerRef }) => {
   const navigateButtonsRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   useEffect(() => {
     gsap.fromTo(
@@ -37,14 +39,72 @@ const NavigateButtons = () => {
     );
   }, []);
 
+  useEffect(() => {
+    /**
+     * Updates the state of the navigation buttons based on the current scroll position
+     * of the scroll container.
+     *
+     * @function updateScrollButtons
+     * @returns {undefined}
+     */
+    const updateScrollButtons = () => {
+      const container = scrollContainerRef.current;
+      if (!container) return;
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft < container.scrollWidth - container.clientWidth
+      );
+    };
+
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", updateScrollButtons);
+    }
+  }, [scrollContainerRef]);
+
+  /**
+   * Scrolls the container in the specified direction by the width of the container.
+   *
+   * @function scroll
+   * @param {string} direction - The direction to scroll, either "left" or "right".
+   *   If "left", the container scrolls to the left. If "right", the container scrolls to the right.
+   * @returns {undefined}
+   */
+
+  const scroll = (direction) => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    const scrollAmount = container.offsetWidth;
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="absolute bottom-6 right-10 z-50" ref={navigateButtonsRef}>
       <div className="flex gap-3">
-        <button className="flex items-center justify-center h-12 w-12 rounded-full bg-[#333335] hover:bg-[#444446] transition-colors">
+        <button
+          className={`flex items-center justify-center h-12 w-12 rounded-full ${
+            canScrollLeft
+              ? "bg-[#333335] hover:bg-[#444446]"
+              : "bg-[#1f1f1f] cursor-not-allowed"
+          }  transition-colors`}
+          onClick={() => scroll("left")}
+          disabled={!canScrollLeft}
+        >
           <ChevronLeft size={30} strokeWidth={3} className="text-white" />
         </button>
 
-        <button className="flex items-center justify-center h-12 w-12 rounded-full bg-[#333335] hover:bg-[#444446] transition-colors">
+        <button
+          className={`flex items-center justify-center h-12 w-12 rounded-full ${
+            canScrollRight
+              ? "bg-[#333335] hover:bg-[#444446]"
+              : "bg-[#1f1f1f] cursor-not-allowed"
+          }  transition-colors`}
+          onClick={() => scroll("right")}
+          disabled={!canScrollRight}
+        >
           <ChevronRight size={30} strokeWidth={3} className="text-white" />
         </button>
       </div>
