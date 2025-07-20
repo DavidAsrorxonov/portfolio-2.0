@@ -24,7 +24,12 @@ const Intro = () => {
     <div className="text-white pt-28 text-center flex justify-center">
       <div className="w-1/3" ref={introRef}>
         <h1 className="text-9xl">Hello, I am David</h1>
-        <span className="text-5xl">I am a Full Stack Developer</span>
+        <span className="text-5xl">
+          I am a{" "}
+          <span className="bg-gradient-to-r from-orange-400 to-red-600 text-transparent bg-clip-text font-extrabold">
+            Full Stack Developer
+          </span>
+        </span>
       </div>
       <img
         src="../images/Subject1.png"
