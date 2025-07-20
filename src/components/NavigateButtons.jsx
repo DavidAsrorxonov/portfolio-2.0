@@ -2,6 +2,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
+/**
+ * NavigateButtons is a component that displays two navigation buttons, one for previous and one for next.
+ * The buttons are positioned at the bottom right of the screen and are animated in when the user scrolls to the bottom of the page.
+ * The component uses the `gsap` library to animate the opacity, scale and position of the buttons.
+ * The buttons are wrapped in a `div` element with a class of "absolute bottom-6 right-10 z-50" to position them at the bottom right of the screen with a z-index of 50.
+ * The buttons themselves are wrapped in a `div` element with a class of "flex gap-3" to display them inline with a gap of 3px.
+ * Each button is a `button` element with a class of "flex items-center justify-center h-12 w-12 rounded-full bg-[#333335] hover:bg-[#444446] transition-colors" to style it as a rounded button with a background color of #333335 and a hover background color of #444446.
+ * The buttons contain a `ChevronLeft` and `ChevronRight` component from the `lucide-react` library to display the navigation icons.
+ * The component uses the `useRef` hook to create a reference to the `div` element with the class of "absolute bottom-6 right-10 z-50".
+ * The component uses the `useEffect` hook to animate the buttons in when the user scrolls to the bottom of the page.
+ * The `useEffect` hook takes a function as its first argument which is called when the component mounts and when the user scrolls to the bottom of the page.
+ * The function takes no arguments and returns no value.
+ * The `useEffect` hook takes an array of dependencies as its second argument, which in this case is an empty array.
+ */
 const NavigateButtons = () => {
   const navigateButtonsRef = useRef(null);
 

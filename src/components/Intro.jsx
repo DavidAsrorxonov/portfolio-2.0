@@ -2,6 +2,14 @@ import { useEffect, useRef } from "react";
 import "../styles/Intro.css";
 import gsap from "gsap";
 
+/**
+ * Intro component which displays a "Hello, I am David" message and a profile image.
+ * The component uses GSAP to animate the opacity and x position of the message and image.
+ * The message is displayed on the left side of the screen and the image is displayed on the right side.
+ * The component is exported as the default component of the module.
+ *
+ * @returns {ReactElement} A JSX element representing the Intro component.
+ */
 const Intro = () => {
   const introRef = useRef(null);
   const imgRef = useRef(null);

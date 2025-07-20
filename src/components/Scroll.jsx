@@ -3,6 +3,15 @@ import ScrollAnim from "../assets/scroll.json";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
+/**
+ * Scroll component that displays an animated Lottie animation.
+ * The animation is initially scaled and faded in using GSAP with a delay.
+ * As the user scrolls, the animation fades out based on the scroll position.
+ * The animation is wrapped in a centered div container.
+ *
+ * @returns {ReactElement} A JSX element containing the animated Lottie component.
+ */
+
 const Scroll = () => {
   const ScrollAnimRef = useRef(null);
 

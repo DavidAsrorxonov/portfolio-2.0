@@ -2,6 +2,14 @@ import React, { useEffect, useRef } from "react";
 import highlight from "../lib/utils/highlight";
 import gsap from "gsap";
 
+/**
+ * A single card component which contains a title, subtitle, description, and quote.
+ * @prop {string} title The title of the card.
+ * @prop {string} [subtitle] The subtitle of the card. Optional.
+ * @prop {string|string[]} description The description of the card. Can be a string or an array of strings.
+ * @prop {string} [quote] The quote of the card. Optional.
+ * @returns {ReactElement} A JSX element representing a single card.
+ */
 const Card = ({ title, subtitle, description, quote }) => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);

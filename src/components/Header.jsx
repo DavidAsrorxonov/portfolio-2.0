@@ -3,6 +3,14 @@ import headerLinks from "../constants/headerLinks";
 import "../styles/Header.css";
 import gsap from "gsap";
 
+/**
+ * A Header component that displays a list of links in the header.
+ * Each link is rendered as an <a> element with a `href` attribute.
+ * The Header component is fixed at the top of the page.
+ * The animation is handled by GSAP.
+ *
+ * @returns {ReactElement} A JSX element representing the Header component.
+ */
 const Header = () => {
   const headerRef = useRef(null);
 
