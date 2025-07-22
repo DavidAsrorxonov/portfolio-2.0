@@ -5,3 +5,4 @@ export { default as CSS3 } from "./CSS";
 export { default as JSON } from "./JSON";
 export { default as Python } from "./Python";
 export { default as GraphQL } from "./GraphQL";
+export { default as Babel } from "./Babel";
