@@ -1,27 +1,30 @@
-import { Info } from "lucide-react";
-import React, { useState } from "react";
+import React from "react";
 
 const SkillsItem = ({ item: { name, Icon, link, description }, index }) => {
-  const [itemDescriptionModal, setItemDescriptionModal] = useState(false);
-  const info = description;
-
   return (
-    <div>
-      <div
-        key={index}
-        className="flex flex-col items-center justify-center space-y-2 hover:scale-105 transition-transform duration-300"
-      >
-        <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center">
-          <Icon className="w-full h-full" />
-        </div>
-        <p className="text-sm text-center">{name}</p>
-        <p>{link}</p>
+    <div
+      key={index}
+      className="relative group flex flex-col items-center justify-center space-y-3 p-4 border border-neutral-800 rounded-2xl bg-[#111111] overflow-hidden transition-all duration-300"
+    >
+      <div className="absolute inset-0 z-0 before:absolute before:inset-0 before:bg-gradient-to-br before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-200%] group-hover:before:animate-sheen-diagonal before:rotate-[25deg] pointer-events-none" />
+
+      <div className="relative z-10 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-neutral-900 border border-neutral-700">
+        <Icon className="w-8 h-8 text-cyan-400" />
       </div>
 
-      {itemDescriptionModal && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4">
-          <p>{info}</p>
-        </div>
+      <p className="relative z-10 text-sm text-neutral-300 text-center font-medium tracking-wide">
+        {name}
+      </p>
+
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative z-10 text-xs text-cyan-500 hover:underline"
+        >
+          Learn more
+        </a>
       )}
     </div>
   );

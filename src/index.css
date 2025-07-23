@@ -8,3 +8,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@layer utilities {
+  @keyframes sheen-diagonal {
+    0% {
+      transform: translate(-150%, -150%);
+    }
+    100% {
+      transform: translate(150%, 150%);
+    }
+  }
+
+  .animate-sheen-diagonal {
+    animation: sheen-diagonal 1.2s ease-in-out forwards;
+  }
+}
