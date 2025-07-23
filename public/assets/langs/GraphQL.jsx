@@ -1,4 +1,3 @@
-import * as React from "react";
 const GraphQL = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +7,6 @@ const GraphQL = (props) => (
     height="1em"
     {...props}
   >
-    <style>{"svg{fill:color(display-p3 0.8824 0 0.5961)}"}</style>
     <path
       fillRule="evenodd"
       clipRule="evenodd"
