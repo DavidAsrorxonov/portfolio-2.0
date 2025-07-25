@@ -1,3 +1,4 @@
+import { SquareArrowOutUpRight } from "lucide-react";
 import React from "react";
 
 const SkillsItem = ({ item: { name, Icon, link, description }, index }) => {
@@ -21,9 +22,10 @@ const SkillsItem = ({ item: { name, Icon, link, description }, index }) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="relative z-10 text-xs text-cyan-500 hover:underline"
+          className="relative z-10 text-xs text-cyan-500 hover:underline flex items-center justify-center gap-2"
         >
-          Learn more
+          Learn more about {name}
+          <SquareArrowOutUpRight size={15} />
         </a>
       )}
     </div>

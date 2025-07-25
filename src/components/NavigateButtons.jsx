@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useNumberOfChildren } from "../context/NumberOfChildrenContext";
 
 /**
  * NavigateButtons is a component that displays two navigation buttons, one for previous and one for next.
@@ -20,6 +21,8 @@ const NavigateButtons = ({ scrollContainerRef }) => {
   const navigateButtonsRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const { setNumberOfChildren, numberOfChildren } = useNumberOfChildren();
 
   useEffect(() => {
     gsap.fromTo(
@@ -49,6 +52,8 @@ const NavigateButtons = ({ scrollContainerRef }) => {
      */
     const updateScrollButtons = () => {
       const container = scrollContainerRef.current;
+      const numberOfChildren = container?.children?.length;
+      setNumberOfChildren(numberOfChildren);
       if (!container) return;
       setCanScrollLeft(container.scrollLeft > 0);
       setCanScrollRight(
@@ -102,7 +107,10 @@ const NavigateButtons = ({ scrollContainerRef }) => {
               ? "bg-[#333335] hover:bg-[#444446]"
               : "bg-[#1f1f1f] cursor-not-allowed"
           }  transition-colors`}
-          onClick={() => scroll("right")}
+          onClick={() => {
+            scroll("right");
+            console.log("Number of children:", numberOfChildren);
+          }}
           disabled={!canScrollRight}
         >
           <ChevronRight size={30} strokeWidth={3} className="text-white" />
