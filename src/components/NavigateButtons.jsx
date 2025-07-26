@@ -22,7 +22,7 @@ const NavigateButtons = ({ scrollContainerRef }) => {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const { setNumberOfChildren, numberOfChildren } = useNumberOfChildren();
+  const { numberOfChildren } = useNumberOfChildren();
 
   useEffect(() => {
     gsap.fromTo(
@@ -52,8 +52,6 @@ const NavigateButtons = ({ scrollContainerRef }) => {
      */
     const updateScrollButtons = () => {
       const container = scrollContainerRef.current;
-      const numberOfChildren = container?.children?.length;
-      setNumberOfChildren(numberOfChildren);
       if (!container) return;
       setCanScrollLeft(container.scrollLeft > 0);
       setCanScrollRight(
@@ -109,7 +107,7 @@ const NavigateButtons = ({ scrollContainerRef }) => {
           }  transition-colors`}
           onClick={() => {
             scroll("right");
-            console.log("Number of children:", numberOfChildren);
+            console.log(numberOfChildren);
           }}
           disabled={!canScrollRight}
         >

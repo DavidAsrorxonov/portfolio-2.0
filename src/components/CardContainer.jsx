@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import Card from "./Card";
 import aboutMe from "../constants/about";
+import { useNumberOfChildren } from "../context/NumberOfChildrenContext";
 
 /**
  * A container component that renders a scrollable list of cards.
@@ -11,6 +12,9 @@ import aboutMe from "../constants/about";
  */
 
 const CardContainer = ({ scrollRef }) => {
+  const { setActiveIndex } = useNumberOfChildren();
+  const itemsRefs = useRef([]);
+
   return (
     <div
       className="w-full h-[85%] overflow-x-scroll scroll-smooth snap-x snap-mandatory flex scrollbar-hide"
