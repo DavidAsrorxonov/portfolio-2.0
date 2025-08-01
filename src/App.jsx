@@ -4,6 +4,7 @@ import Landing from "./containers/Landing";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Skills from "./containers/Skills";
+import Projects from "./containers/Projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,7 @@ function App() {
       <Landing />
       <About />
       <Skills />
+      <Projects />
     </div>
   );
 }
